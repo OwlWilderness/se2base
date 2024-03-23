@@ -1,0 +1,35 @@
+{
+  "language": "Solidity",
+  "sources": {
+    "contracts/ControlStructures.sol": {
+      "content": "//SPDX-License-Identifier: MIT\npragma solidity >=0.8.0 <0.9.0;\n\n ///@author tekh.eth\n ///@notice base camp exercise 1\n\ncontract ControlStructures {\n    function fizzBuzz(uint _number) public pure returns (string memory fizzBuzz){\n    /*\n    Create a function called fizzBuzz that accepts a uint called _number and returns a string memory. The function should return:\n\n    \"Fizz\" if the _number is divisible by 3\n    \"Buzz\" if the _number is divisible by 5\n    \"FizzBuzz\" if the _number is divisible by 3 and 5\n    \"Splat\" if none of the above conditions are true\n    */\n        bool fizz = false;\n        bool buzz = false;\n       \n        if(_number % 3 == 0){\n            fizz = true;\n        } \n\n        if(_number % 5 == 0){\n            buzz = true;\n        }\n\n        if(fizz && buzz ){\n            return \"FizzBuzz\";\n        } else if (fizz) {\n            return \"Fizz\";\n        } else if (buzz) {\n            return \"Buzz\";\n        } else {\n            return \"Splat\";\n        }\n    }\n\n    /*\n    Create a function called doNotDisturb that accepts a uint called _time,\n     and returns a string memory. It should adhere to the following properties:\n\n    If _time is greater than or equal to 2400, trigger a panic\n    If _time is greater than 2200 or less than 800, revert with a custom error of AfterHours, \n    and include the time provided\n    If _time is between 1200 and 1299, revert with a string message \"At lunch!\"\n    If _time is between 800 and 1199, return \"Morning!\"\n    If _time is between 1300 and 1799, return \"Afternoon!\"\n    If _time is between 1800 and 2200, return \"Evening!\"\n\n    //this is a little weird as the time is 99 and not 59 but as an exercise...\n    */\n\n    error AfterHours(uint time);\n\n    function doNotDisturb (uint _time) public pure returns (string memory message){\n        assert(_time < 2400);\n\n        if(_time > 2200 || _time < 800){\n            revert AfterHours(_time);\n        }\n\n        if(_time >= 1200 && _time < 1300){\n            revert (\"At Lunch!\");\n        }\n\n        if(_time >= 800 && _time < 1200){\n            return \"Morning!\";\n        }\n\n        if(_time >= 1300 && _time < 1800){\n            return \"Afternoon!\";\n        }\n\n        if(_time >= 1800 && _time <= 2200){\n            return \"Evening!\";\n        }\n    }\n}"
+    }
+  },
+  "settings": {
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "outputSelection": {
+      "*": {
+        "*": [
+          "abi",
+          "evm.bytecode",
+          "evm.deployedBytecode",
+          "evm.methodIdentifiers",
+          "metadata",
+          "devdoc",
+          "userdoc",
+          "storageLayout",
+          "evm.gasEstimates"
+        ],
+        "": [
+          "ast"
+        ]
+      }
+    },
+    "metadata": {
+      "useLiteralContent": true
+    }
+  }
+}

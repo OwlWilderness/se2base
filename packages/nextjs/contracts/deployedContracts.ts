@@ -5,100 +5,35 @@
 import { GenericContractsDeclaration } from "~~/utils/scaffold-eth/contract";
 
 const deployedContracts = {
-  31337: {
-    BasicMath: {
-      address: "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
-      abi: [
-        {
-          inputs: [
-            {
-              internalType: "uint256",
-              name: "_a",
-              type: "uint256",
-            },
-            {
-              internalType: "uint256",
-              name: "_b",
-              type: "uint256",
-            },
-          ],
-          name: "adder",
-          outputs: [
-            {
-              internalType: "uint256",
-              name: "sum",
-              type: "uint256",
-            },
-            {
-              internalType: "bool",
-              name: "error",
-              type: "bool",
-            },
-          ],
-          stateMutability: "pure",
-          type: "function",
-        },
-        {
-          inputs: [
-            {
-              internalType: "uint256",
-              name: "_a",
-              type: "uint256",
-            },
-            {
-              internalType: "uint256",
-              name: "_b",
-              type: "uint256",
-            },
-          ],
-          name: "subtractor",
-          outputs: [
-            {
-              internalType: "uint256",
-              name: "difference",
-              type: "uint256",
-            },
-            {
-              internalType: "bool",
-              name: "error",
-              type: "bool",
-            },
-          ],
-          stateMutability: "pure",
-          type: "function",
-        },
-      ],
-      inheritedFunctions: {},
-    },
-  },
   84532: {
-    BasicMath: {
-      address: "0x3466DE9Ec4db79B75Dcd2bFad13Bbb145105e56c",
+    ControlStructures: {
+      address: "0xD16c6d7DC8e7B35376D881F13A2Cceb992005D73",
       abi: [
         {
           inputs: [
             {
               internalType: "uint256",
-              name: "_a",
-              type: "uint256",
-            },
-            {
-              internalType: "uint256",
-              name: "_b",
+              name: "time",
               type: "uint256",
             },
           ],
-          name: "adder",
-          outputs: [
+          name: "AfterHours",
+          type: "error",
+        },
+        {
+          inputs: [
             {
               internalType: "uint256",
-              name: "sum",
+              name: "_time",
               type: "uint256",
             },
+          ],
+          name: "doNotDisturb",
+          outputs: [
             {
-              internalType: "bool",
-              name: "error",
-              type: "bool",
+              internalType: "string",
+              name: "message",
+              type: "string",
             },
           ],
           stateMutability: "pure",
@@ -108,26 +43,16 @@ const deployedContracts = {
           inputs: [
             {
               internalType: "uint256",
-              name: "_a",
-              type: "uint256",
-            },
-            {
-              internalType: "uint256",
-              name: "_b",
+              name: "_number",
               type: "uint256",
             },
           ],
-          name: "subtractor",
+          name: "fizzBuzz",
           outputs: [
             {
-              internalType: "uint256",
-              name: "difference",
-              type: "uint256",
-            },
-            {
-              internalType: "bool",
-              name: "error",
-              type: "bool",
+              internalType: "string",
+              name: "fizzBuzz",
+              type: "string",
             },
           ],
           stateMutability: "pure",

@@ -1,7 +1,8 @@
 import { HardhatRuntimeEnvironment } from "hardhat/types";
 import { DeployFunction } from "hardhat-deploy/types";
-import { Contract } from "ethers";
+//import { Contract } from "ethers";
 
+const ContractName = "ControlStructures";
 /**
  * Deploys a contract named "YourContract" using the deployer account and
  * constructor arguments set to the deployer address
@@ -22,7 +23,7 @@ const deployYourContract: DeployFunction = async function (hre: HardhatRuntimeEn
   const { deployer } = await hre.getNamedAccounts();
   const { deploy } = hre.deployments;
 
-  await deploy("BasicMath", {
+  await deploy(ContractName, {
     from: deployer,
     // Contract constructor arguments
     //args: [deployer],
@@ -33,12 +34,12 @@ const deployYourContract: DeployFunction = async function (hre: HardhatRuntimeEn
   });
 
   // Get the deployed contract to interact with it after deploying.
-  const basicMath = await hre.ethers.getContract<Contract>("BasicMath", deployer);
-  console.log("👋 Initial result:", await basicMath.adder(1, 1));
+  // const basicMath = await hre.ethers.getContract<Contract>(ContractName, deployer);
+  // console.log("👋 Initial result:", await basicMath.adder(1, 1));
 };
 
 export default deployYourContract;
 
 // Tags are useful if you have multiple deploy files and only want to run one of them.
 // e.g. yarn deploy --tags YourContract
-deployYourContract.tags = ["BasicMath"];
+deployYourContract.tags = [ContractName];
