@@ -1,0 +1,101 @@
+{
+  "address": "0x3466DE9Ec4db79B75Dcd2bFad13Bbb145105e56c",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_a",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_b",
+          "type": "uint256"
+        }
+      ],
+      "name": "adder",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "sum",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bool",
+          "name": "error",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_a",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_b",
+          "type": "uint256"
+        }
+      ],
+      "name": "subtractor",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "difference",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bool",
+          "name": "error",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0xb52fb724c7088c747f0e8043f02dff4396c5b42c004adb0f86d4bc75217d37b4",
+  "receipt": {
+    "to": null,
+    "from": "0xe615999EF19775E8EE6FEc3dbe9ee4ec224B445a",
+    "contractAddress": "0x3466DE9Ec4db79B75Dcd2bFad13Bbb145105e56c",
+    "transactionIndex": 5,
+    "gasUsed": "104637",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0xad9f5c0c873054670ddb0e6b67c9755f0fed77a03f285d28d1525e494646f164",
+    "transactionHash": "0xb52fb724c7088c747f0e8043f02dff4396c5b42c004adb0f86d4bc75217d37b4",
+    "logs": [],
+    "blockNumber": 7725786,
+    "cumulativeGasUsed": "365164",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "numDeployments": 2,
+  "solcInputHash": "dd5238c089e8bbe973629a9475a2dfb0",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_a\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_b\",\"type\":\"uint256\"}],\"name\":\"adder\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"sum\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"error\",\"type\":\"bool\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_a\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_b\",\"type\":\"uint256\"}],\"name\":\"subtractor\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"difference\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"error\",\"type\":\"bool\"}],\"stateMutability\":\"pure\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"tekh.eth\",\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"notice\":\"base camp exercise 1\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/BasicMath.sol\":\"BasicMath\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/BasicMath.sol\":{\"content\":\"//SPDX-License-Identifier: MIT\\npragma solidity >=0.8.0 <0.9.0;\\n\\n ///@author tekh.eth\\n ///@notice base camp exercise 1\\n\\ncontract BasicMath {\\n    \\n    function adder (uint _a, uint _b) public pure returns (uint sum, bool error) {\\n        unchecked{\\n            sum = _a + _b;\\n            error = sum < (_a | _b);\\n        }\\n        return (sum, error);\\n    \\n    }\\n\\n    function subtractor(uint _a, uint _b) public pure returns (uint difference, bool error) {\\n        unchecked{\\n            difference = _a - _b;\\n            error = difference > (_a | _b);\\n        }\\n        if(error){\\n            difference = 0;\\n        }\\n        return (difference, error);\\n    }\\n}\",\"keccak256\":\"0xf3cd5d42fb610cb6338b338df3365b9cca5d9080819329dd9063d96438db8a91\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5060ed8061001f6000396000f3fe6080604052348015600f57600080fd5b506004361060325760003560e01c806306b034e91460375780635270312a14605f575b600080fd5b604660423660046096565b606e565b6040805192835290151560208301520160405180910390f35b6046606a3660046096565b607e565b81810182821781105b9250929050565b80820382821781118015607757600091509250929050565b6000806040838503121560a857600080fd5b5050803592602090910135915056fea264697066735822122000995117239a5caf8806168213c6b822893e67397dae5bd0e4f4538a5e60a8a864736f6c63430008110033",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060325760003560e01c806306b034e91460375780635270312a14605f575b600080fd5b604660423660046096565b606e565b6040805192835290151560208301520160405180910390f35b6046606a3660046096565b607e565b81810182821781105b9250929050565b80820382821781118015607757600091509250929050565b6000806040838503121560a857600080fd5b5050803592602090910135915056fea264697066735822122000995117239a5caf8806168213c6b822893e67397dae5bd0e4f4538a5e60a8a864736f6c63430008110033",
+  "devdoc": {
+    "author": "tekh.eth",
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "notice": "base camp exercise 1",
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [],
+    "types": null
+  }
+}
