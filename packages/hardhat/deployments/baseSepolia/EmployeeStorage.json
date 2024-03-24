@@ -1,0 +1,237 @@
+{
+  "address": "0xD5D919afca120E94E09fdBF902237CA1ea58d50A",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint16",
+          "name": "_shares",
+          "type": "uint16"
+        },
+        {
+          "internalType": "string",
+          "name": "_name",
+          "type": "string"
+        },
+        {
+          "internalType": "uint24",
+          "name": "_salary",
+          "type": "uint24"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_idNumber",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint16",
+          "name": "_shares",
+          "type": "uint16"
+        }
+      ],
+      "name": "TooManyShares",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_slot",
+          "type": "uint256"
+        }
+      ],
+      "name": "checkForPacking",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "r",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "debugResetShares",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint16",
+          "name": "_newShares",
+          "type": "uint16"
+        }
+      ],
+      "name": "grantShares",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "idNumber",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "name",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "viewSalary",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "viewShares",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0xb780b1b096b1731bad36fb308bc224c83095dd7b406809d5b7a87867a77b8ef2",
+  "receipt": {
+    "to": null,
+    "from": "0xe615999EF19775E8EE6FEc3dbe9ee4ec224B445a",
+    "contractAddress": "0xD5D919afca120E94E09fdBF902237CA1ea58d50A",
+    "transactionIndex": 3,
+    "gasUsed": "324749",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0x879eec1a4fb8f0e94ee38396e8adb24962cc6bc462464937deb901daa2f4f83f",
+    "transactionHash": "0xb780b1b096b1731bad36fb308bc224c83095dd7b406809d5b7a87867a77b8ef2",
+    "logs": [],
+    "blockNumber": 7735749,
+    "cumulativeGasUsed": "1165817",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [
+    1000,
+    "Pat",
+    50000,
+    112358132134
+  ],
+  "numDeployments": 1,
+  "solcInputHash": "379c56f1829204f0f34d2c064f5e38a2",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint16\",\"name\":\"_shares\",\"type\":\"uint16\"},{\"internalType\":\"string\",\"name\":\"_name\",\"type\":\"string\"},{\"internalType\":\"uint24\",\"name\":\"_salary\",\"type\":\"uint24\"},{\"internalType\":\"uint256\",\"name\":\"_idNumber\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[{\"internalType\":\"uint16\",\"name\":\"_shares\",\"type\":\"uint16\"}],\"name\":\"TooManyShares\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_slot\",\"type\":\"uint256\"}],\"name\":\"checkForPacking\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"r\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"debugResetShares\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint16\",\"name\":\"_newShares\",\"type\":\"uint16\"}],\"name\":\"grantShares\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"idNumber\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"name\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"viewSalary\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"viewShares\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"tekh.eth\",\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"checkForPacking(uint256)\":{\"notice\":\"Do not modify this function.  It is used to enable the unit test for this pin to check whether or not you have configured your storage variables to make use of packing. If you wish to cheat, simply modify this function to always return `0` I'm not your boss \\u00af\\\\_(\\u30c4)_/\\u00af Fair warning though, if you do cheat, it will be on the blockchain having been deployed by your wallet....FOREVER!\"},\"debugResetShares()\":{\"notice\":\"Warning: Anyone can use this function at any time!\"}},\"notice\":\"base camp exercise IIIhttps://docs.base.org/base-camp/docs/storage/storage-exercise\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/EmployeeSotrage.sol\":\"EmployeeStorage\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/EmployeeSotrage.sol\":{\"content\":\"//SPDX-License-Identifier: MIT\\npragma solidity >=0.8.0 <0.9.0;\\n\\n ///@author tekh.eth\\n ///@notice base camp exercise III\\n ///@notice https://docs.base.org/base-camp/docs/storage/storage-exercise\\n\\ncontract EmployeeStorage {\\n\\n    /*\\n    State Variables\\n    The contract should have the following state variables, optimized to minimize storage:\\n\\n    A private variable shares storing the employee's number of shares owned\\n    Employees with more than 5,000 shares count as directors and are stored in another contract\\n    Public variable name which stores the employee's name\\n    A private variable salary storing the employee's salary\\n    Salaries range from 0 to 1,000,000 dollars\\n    A public variable idNumber storing the employee's ID number\\n    Employee numbers are not sequential, so this field should allow any number up to 2^256-1\\n    */\\n\\n\\n    uint16 private shares; \\n    uint24 private salary;\\n    string public name;\\n    uint256 public idNumber;\\n\\n\\n    constructor(uint16 _shares, string memory _name, uint24 _salary, uint256 _idNumber){\\n        shares = _shares;\\n        salary = _salary;\\n        idNumber = _idNumber;\\n        name = _name;\\n    }\\n\\n    function viewSalary() public view returns(uint){\\n        return salary;\\n    }\\n\\n    function viewShares() public view returns(uint){\\n        return shares;\\n    }\\n\\n    error TooManyShares(uint16 _shares);\\n\\n    function grantShares(uint16 _newShares) public {\\n        /*\\n        Add a public function called grantShares \\n        that increases the number of shares allocated to an employee by _newShares. \\n        It should:\\n\\n        Add the provided number of shares to the shares\\n            If this would result in more than 5000 shares, \\n            revert with a custom error called TooManyShares \\n            that returns the number of shares the employee would have with the new amount added\\n    \\n            If the number of _newShares is greater than 5000, \\n            revert with a string message, \\\"Too many shares\\\"\\n        */\\n\\n        \\n        \\n        require(_newShares <= 5000, \\\"Too many shares\\\");\\n\\n        uint16 newShares = shares + _newShares;\\n\\n        if(newShares > 5000){\\n            revert TooManyShares(newShares);\\n        }\\n    \\n        shares = newShares;\\n                \\n    }\\n\\n    /**\\n    * Do not modify this function.  It is used to enable the unit test for this pin\\n    * to check whether or not you have configured your storage variables to make\\n    * use of packing.\\n    *\\n    * If you wish to cheat, simply modify this function to always return `0`\\n    * I'm not your boss \\u00af\\\\_(\\u30c4)_/\\u00af\\n    *\\n    * Fair warning though, if you do cheat, it will be on the blockchain having been\\n    * deployed by your wallet....FOREVER!\\n    */\\n    function checkForPacking(uint _slot) public view returns (uint r) {\\n        assembly {\\n            r := sload (_slot)\\n        }\\n    }\\n\\n    /**\\n    * Warning: Anyone can use this function at any time!\\n    */\\n    function debugResetShares() public {\\n        shares = 1000;\\n    }\\n}\\n\",\"keccak256\":\"0x3690b4fe6ddacf6e069e7f77f2e6073379bde7da74d77c78100910ed0cdc89b0\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5060405161066638038061066683398101604081905261002f9161009a565b6000805462ffffff8416620100000264ffffffffff1990911661ffff87161717905560028190556001610062848261021f565b50505050506102de565b634e487b7160e01b600052604160045260246000fd5b805162ffffff8116811461009557600080fd5b919050565b600080600080608085870312156100b057600080fd5b845161ffff811681146100c257600080fd5b602086810151919550906001600160401b03808211156100e157600080fd5b818801915088601f8301126100f557600080fd5b8151818111156101075761010761006c565b604051601f8201601f19908116603f0116810190838211818310171561012f5761012f61006c565b816040528281528b8684870101111561014757600080fd5b600093505b82841015610169578484018601518185018701529285019261014c565b600086848301015280985050505050505061018660408601610082565b6060959095015193969295505050565b600181811c908216806101aa57607f821691505b6020821081036101ca57634e487b7160e01b600052602260045260246000fd5b50919050565b601f82111561021a57600081815260208120601f850160051c810160208610156101f75750805b601f850160051c820191505b8181101561021657828155600101610203565b5050505b505050565b81516001600160401b038111156102385761023861006c565b61024c816102468454610196565b846101d0565b602080601f83116001811461028157600084156102695750858301515b600019600386901b1c1916600185901b178555610216565b600085815260208120601f198616915b828110156102b057888601518255948401946001909101908401610291565b50858210156102ce5787850151600019600388901b60f8161c191681555b5050505050600190811b01905550565b610379806102ed6000396000f3fe608060405234801561001057600080fd5b506004361061007d5760003560e01c80634c7648091161005b5780634c764809146100ca57806352c98689146100e05780636d45e2a5146100f35780638f6a861a146100ff57600080fd5b806306fdde03146100825780633f83ea3b146100a057806349574402146100b7575b600080fd5b61008a610111565b6040516100979190610247565b60405180910390f35b6100a960025481565b604051908152602001610097565b60005462010000900462ffffff166100a9565b6100de6000805461ffff19166103e8179055565b005b6100de6100ee366004610295565b61019f565b60005461ffff166100a9565b6100a961010d3660046102c0565b5490565b6001805461011e906102d9565b80601f016020809104026020016040519081016040528092919081815260200182805461014a906102d9565b80156101975780601f1061016c57610100808354040283529160200191610197565b820191906000526020600020905b81548152906001019060200180831161017a57829003601f168201915b505050505081565b6113888161ffff1611156101ec5760405162461bcd60e51b815260206004820152600f60248201526e546f6f206d616e792073686172657360881b60448201526064015b60405180910390fd5b600080546101ff90839061ffff16610313565b90506113888161ffff16111561022e576040516315f9c60960e21b815261ffff821660048201526024016101e3565b6000805461ffff191661ffff9290921691909117905550565b600060208083528351808285015260005b8181101561027457858101830151858201604001528201610258565b506000604082860101526040601f19601f8301168501019250505092915050565b6000602082840312156102a757600080fd5b813561ffff811681146102b957600080fd5b9392505050565b6000602082840312156102d257600080fd5b5035919050565b600181811c908216806102ed57607f821691505b60208210810361030d57634e487b7160e01b600052602260045260246000fd5b50919050565b61ffff81811683821601908082111561033c57634e487b7160e01b600052601160045260246000fd5b509291505056fea264697066735822122015a745f6b97b55d396cedf79d812bb05e10ea2bbb4b6fb8b3665c484ac6fc1f264736f6c63430008110033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061007d5760003560e01c80634c7648091161005b5780634c764809146100ca57806352c98689146100e05780636d45e2a5146100f35780638f6a861a146100ff57600080fd5b806306fdde03146100825780633f83ea3b146100a057806349574402146100b7575b600080fd5b61008a610111565b6040516100979190610247565b60405180910390f35b6100a960025481565b604051908152602001610097565b60005462010000900462ffffff166100a9565b6100de6000805461ffff19166103e8179055565b005b6100de6100ee366004610295565b61019f565b60005461ffff166100a9565b6100a961010d3660046102c0565b5490565b6001805461011e906102d9565b80601f016020809104026020016040519081016040528092919081815260200182805461014a906102d9565b80156101975780601f1061016c57610100808354040283529160200191610197565b820191906000526020600020905b81548152906001019060200180831161017a57829003601f168201915b505050505081565b6113888161ffff1611156101ec5760405162461bcd60e51b815260206004820152600f60248201526e546f6f206d616e792073686172657360881b60448201526064015b60405180910390fd5b600080546101ff90839061ffff16610313565b90506113888161ffff16111561022e576040516315f9c60960e21b815261ffff821660048201526024016101e3565b6000805461ffff191661ffff9290921691909117905550565b600060208083528351808285015260005b8181101561027457858101830151858201604001528201610258565b506000604082860101526040601f19601f8301168501019250505092915050565b6000602082840312156102a757600080fd5b813561ffff811681146102b957600080fd5b9392505050565b6000602082840312156102d257600080fd5b5035919050565b600181811c908216806102ed57607f821691505b60208210810361030d57634e487b7160e01b600052602260045260246000fd5b50919050565b61ffff81811683821601908082111561033c57634e487b7160e01b600052601160045260246000fd5b509291505056fea264697066735822122015a745f6b97b55d396cedf79d812bb05e10ea2bbb4b6fb8b3665c484ac6fc1f264736f6c63430008110033",
+  "devdoc": {
+    "author": "tekh.eth",
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {
+      "checkForPacking(uint256)": {
+        "notice": "Do not modify this function.  It is used to enable the unit test for this pin to check whether or not you have configured your storage variables to make use of packing. If you wish to cheat, simply modify this function to always return `0` I'm not your boss ¯\\_(ツ)_/¯ Fair warning though, if you do cheat, it will be on the blockchain having been deployed by your wallet....FOREVER!"
+      },
+      "debugResetShares()": {
+        "notice": "Warning: Anyone can use this function at any time!"
+      }
+    },
+    "notice": "base camp exercise IIIhttps://docs.base.org/base-camp/docs/storage/storage-exercise",
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 4,
+        "contract": "contracts/EmployeeSotrage.sol:EmployeeStorage",
+        "label": "shares",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_uint16"
+      },
+      {
+        "astId": 6,
+        "contract": "contracts/EmployeeSotrage.sol:EmployeeStorage",
+        "label": "salary",
+        "offset": 2,
+        "slot": "0",
+        "type": "t_uint24"
+      },
+      {
+        "astId": 8,
+        "contract": "contracts/EmployeeSotrage.sol:EmployeeStorage",
+        "label": "name",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_string_storage"
+      },
+      {
+        "astId": 10,
+        "contract": "contracts/EmployeeSotrage.sol:EmployeeStorage",
+        "label": "idNumber",
+        "offset": 0,
+        "slot": "2",
+        "type": "t_uint256"
+      }
+    ],
+    "types": {
+      "t_string_storage": {
+        "encoding": "bytes",
+        "label": "string",
+        "numberOfBytes": "32"
+      },
+      "t_uint16": {
+        "encoding": "inplace",
+        "label": "uint16",
+        "numberOfBytes": "2"
+      },
+      "t_uint24": {
+        "encoding": "inplace",
+        "label": "uint24",
+        "numberOfBytes": "3"
+      },
+      "t_uint256": {
+        "encoding": "inplace",
+        "label": "uint256",
+        "numberOfBytes": "32"
+      }
+    }
+  }
+}

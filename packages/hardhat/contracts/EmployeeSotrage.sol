@@ -4,7 +4,7 @@ pragma solidity >=0.8.0 <0.9.0;
  ///@author tekh.eth
  ///@notice base camp exercise III
  ///@notice https://docs.base.org/base-camp/docs/storage/storage-exercise
- 
+
 contract EmployeeStorage {
 
     /*
@@ -20,39 +20,29 @@ contract EmployeeStorage {
     Employee numbers are not sequential, so this field should allow any number up to 2^256-1
     */
 
-    uint16 private shares;
+
+    uint16 private shares; 
     uint24 private salary;
-
-    uint public idNumber;
     string public name;
-
-    uint16 MAX_SHARES = 5000;
-    uint24 MAX_SALARY = 1000000;
+    uint256 public idNumber;
 
 
-    constructor(uint16 _shares, string memory _name, uint24 _salary, uint _idNumber){
-        if(shares > MAX_SHARES){
-            revert("require shared <= 5000");
-        }
-        if(salary > MAX_SALARY){
-            revert("require salary <= 1,000,000");
-        }
-
+    constructor(uint16 _shares, string memory _name, uint24 _salary, uint256 _idNumber){
         shares = _shares;
         salary = _salary;
         idNumber = _idNumber;
         name = _name;
     }
 
-    function viewSalary() public view returns(uint24){
+    function viewSalary() public view returns(uint){
         return salary;
     }
 
-    function viewShares() public view returns(uint16){
+    function viewShares() public view returns(uint){
         return shares;
     }
 
-    error TooManyShares(uint24 shares);
+    error TooManyShares(uint16 _shares);
 
     function grantShares(uint16 _newShares) public {
         /*
@@ -68,16 +58,19 @@ contract EmployeeStorage {
             If the number of _newShares is greater than 5000, 
             revert with a string message, "Too many shares"
         */
-        if(_newShares > MAX_SHARES){
-            revert("Too many shares");
-        }
 
-        uint24 newShares = shares + _newShares;
-        if(newShares > MAX_SHARES){
+        
+        
+        require(_newShares <= 5000, "Too many shares");
+
+        uint16 newShares = shares + _newShares;
+
+        if(newShares > 5000){
             revert TooManyShares(newShares);
         }
-
-        shares = uint16(newShares);
+    
+        shares = newShares;
+                
     }
 
     /**

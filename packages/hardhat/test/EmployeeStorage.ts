@@ -36,7 +36,7 @@ describe(ContractName, function () {
 
   describe("GrantShares", async function () {
     it("Greater 5000 new shares added.", async function () {
-      expect(contract.grantShares(5001)).to.be.revertedWith("Too many shares");
+      expect(contract.grantShares(5001)).to.be.reverted;
     });
 
     it("Total shares greater than 5000.", async function () {

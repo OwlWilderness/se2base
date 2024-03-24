@@ -6,56 +6,135 @@ import { GenericContractsDeclaration } from "~~/utils/scaffold-eth/contract";
 
 const deployedContracts = {
   84532: {
-    ControlStructures: {
-      address: "0xD16c6d7DC8e7B35376D881F13A2Cceb992005D73",
+    EmployeeStorage: {
+      address: "0xD5D919afca120E94E09fdBF902237CA1ea58d50A",
       abi: [
         {
           inputs: [
             {
+              internalType: "uint16",
+              name: "_shares",
+              type: "uint16",
+            },
+            {
+              internalType: "string",
+              name: "_name",
+              type: "string",
+            },
+            {
+              internalType: "uint24",
+              name: "_salary",
+              type: "uint24",
+            },
+            {
               internalType: "uint256",
-              name: "time",
+              name: "_idNumber",
               type: "uint256",
             },
           ],
-          name: "AfterHours",
+          stateMutability: "nonpayable",
+          type: "constructor",
+        },
+        {
+          inputs: [
+            {
+              internalType: "uint16",
+              name: "_shares",
+              type: "uint16",
+            },
+          ],
+          name: "TooManyShares",
           type: "error",
         },
         {
           inputs: [
             {
               internalType: "uint256",
-              name: "_time",
+              name: "_slot",
               type: "uint256",
             },
           ],
-          name: "doNotDisturb",
+          name: "checkForPacking",
           outputs: [
             {
-              internalType: "string",
-              name: "message",
-              type: "string",
+              internalType: "uint256",
+              name: "r",
+              type: "uint256",
             },
           ],
-          stateMutability: "pure",
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "debugResetShares",
+          outputs: [],
+          stateMutability: "nonpayable",
           type: "function",
         },
         {
           inputs: [
             {
+              internalType: "uint16",
+              name: "_newShares",
+              type: "uint16",
+            },
+          ],
+          name: "grantShares",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "idNumber",
+          outputs: [
+            {
               internalType: "uint256",
-              name: "_number",
+              name: "",
               type: "uint256",
             },
           ],
-          name: "fizzBuzz",
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "name",
           outputs: [
             {
               internalType: "string",
-              name: "fizzBuzz",
+              name: "",
               type: "string",
             },
           ],
-          stateMutability: "pure",
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "viewSalary",
+          outputs: [
+            {
+              internalType: "uint256",
+              name: "",
+              type: "uint256",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "viewShares",
+          outputs: [
+            {
+              internalType: "uint256",
+              name: "",
+              type: "uint256",
+            },
+          ],
+          stateMutability: "view",
           type: "function",
         },
       ],
