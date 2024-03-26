@@ -2,7 +2,7 @@ import { HardhatRuntimeEnvironment } from "hardhat/types";
 import { DeployFunction } from "hardhat-deploy/types";
 //import { Contract } from "ethers";
 
-const ContractName = "EmployeeStorage";
+const ContractName = "ArraysExercise";
 /**
  * Deploys a contract named "YourContract" using the deployer account and
  * constructor arguments set to the deployer address
@@ -36,7 +36,7 @@ const deployYourContract: DeployFunction = async function (hre: HardhatRuntimeEn
   await deploy(ContractName, {
     from: deployer,
     // Contract constructor arguments
-    args: [1000, "Pat", 50000, 112358132134],
+    //args: [1000, "Pat", 50000, 112358132134],
     log: true,
     // autoMine: can be passed to the deploy function to make the deployment process faster on local networks by
     // automatically mining the contract deployment transaction. There is no effect on live networks.
