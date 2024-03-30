@@ -2,7 +2,7 @@ import { HardhatRuntimeEnvironment } from "hardhat/types";
 import { DeployFunction } from "hardhat-deploy/types";
 //import { Contract } from "ethers";
 
-const ContractName = "ArraysExercise";
+const ContractName = "FavoriteRecords";
 /**
  * Deploys a contract named "YourContract" using the deployer account and
  * constructor arguments set to the deployer address
@@ -32,11 +32,23 @@ const deployYourContract: DeployFunction = async function (hre: HardhatRuntimeEn
     salary - 50000
     idNumber - 112358132134
 */
+  const albums = [
+    "Thriller",
+    "Back in Black",
+    "The Bodyguard",
+    "The Dark Side of the Moon",
+    "Their Greatest Hits (1971-1975)",
+    "Hotel California",
+    "Come On Over",
+    "Rumours",
+    "Saturday Night Fever",
+  ];
 
   await deploy(ContractName, {
     from: deployer,
     // Contract constructor arguments
     //args: [1000, "Pat", 50000, 112358132134],
+    args: [albums],
     log: true,
     // autoMine: can be passed to the deploy function to make the deployment process faster on local networks by
     // automatically mining the contract deployment transaction. There is no effect on live networks.
